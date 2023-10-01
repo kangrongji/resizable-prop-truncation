@@ -34,7 +34,7 @@ In `Resizing.agda`, we show that
 
 In other words, the existence of the usual weak propositional truncation, together with the validity of the proposition resizing axiom, is equivalent to the existence of weak resizable propositional truncation.
 
-The proof is not complicated and can be seen as a direct corollary of that the property "$A \ \textsf{is a propositional truncation of} \ B$" is preserved
+The proof is not complicated and can be seen as a direct corollary of that the property "$A \ \text{is a propositional truncation of} \ B$" is preserved
 by equivalence.
 For convenience,
 we use some lemmas from the `Cubical Agda` library.
