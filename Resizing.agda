@@ -82,7 +82,7 @@ record ∃WeakPT : SSetω where
 record ∃ResWeakPT : SSetω where
   field
     ∥_∥  : {ℓ ℓ' : Level} → Type ℓ → Type ℓ'
-    ispt : {X : Type ℓ} → isWeakPropTrunc {ℓ' = ℓ'} X ∥ X ∥
+    ispt : {ℓ ℓ' : Level} {X : Type ℓ} → isWeakPropTrunc {ℓ' = ℓ'} X ∥ X ∥
 
 
 {-
