@@ -19,13 +19,13 @@ $$
 }
 $$
 
-The usual one is simply the case when $\ell=\ell'$.
 All other rules remain the same.
-There are two versions of it,
+The usual one is simply the special case when $\ell=\ell'$.
+There are, in fact, two versions of it,
 as we can use either judgemental or propositional equality in the
 formulation of the $\beta$-rule.
-In the former case, we call it **strict**,
-and in the latter case, we refer to it as **weak**.
+In the former case, it is called **strict**,
+and in the latter case, it is referred to as **weak**.
 
 The main purpose is to reformulate Voevodsky's axiom of proposition resizing.
 In `Resizing.agda`, we show that
