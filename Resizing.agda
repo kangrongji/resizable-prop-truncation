@@ -34,6 +34,7 @@ record isWeakPropTrunc (X : Type ℓ) (∥X∥ : Type ℓ') : SSetω where
     ∣_∣    : X → ∥X∥
     squash : (x y : ∥X∥) → x ≡ y
     elim   :
+      {ℓ'' : Level}
       {P : ∥X∥ → Type ℓ''}
       (p : (x : X) → P ∣ x ∣)
       (h : isPropDep P)
