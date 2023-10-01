@@ -47,11 +47,11 @@ toProp ispt = _ , squash
   where open isWeakPropTrunc ispt
 
 PropTrucEquiv : {X : Type ℓ} {Y : Type ℓ'} → isProp X → isWeakPropTrunc X Y → X ≃ Y
-PropTrucEquiv {X = X} {Y} h ispt = propBiimpl→Equiv h squash ∣_∣ back
+PropTrucEquiv {X = X} {Y} h ispt = propBiimpl→Equiv h squash ∣_∣ backward
   where
   open isWeakPropTrunc ispt
-  back : Y → X
-  back = elim (λ x → x) (isOfHLevel→isOfHLevelDep 1 (λ _ → h))
+  backward : Y → X
+  backward = elim (λ x → x) (isOfHLevel→isOfHLevelDep 1 (λ _ → h))
 
 isWeakPropTruncPresEquiv :
   {X : Type ℓ} {A : Type ℓ'} {B : Type ℓ''} → A ≃ B → isWeakPropTrunc X A → isWeakPropTrunc X B
@@ -74,12 +74,12 @@ Existence of (Resizable) Weak Propositional Truncation
 
 -}
 
-record ∃WeakPropTruc : SSetω where
+record ∃WeakPT : SSetω where
   field
     ∥_∥  : Type ℓ → Type ℓ
     ispt : {X : Type ℓ} → isWeakPropTrunc X ∥ X ∥
 
-record ∃ResWeakPropTruc : SSetω where
+record ∃ResWeakPT : SSetω where
   field
     ∥_∥  : {ℓ ℓ' : Level} → Type ℓ → Type ℓ'
     ispt : {X : Type ℓ} → isWeakPropTrunc {ℓ' = ℓ'} X ∥ X ∥
@@ -87,22 +87,22 @@ record ∃ResWeakPropTruc : SSetω where
 
 {-
 
-Equivalence between Resizing Axioms
+Weak PropTruncation + Resizing = Resizable Weak PropTruncation
 
 -}
 
 open Resizing
-open ∃WeakPropTruc
-open ∃ResWeakPropTruc
+open ∃WeakPT
+open ∃ResWeakPT
 
-∃ResWeakPropTruc→∃WeakPropTruc : ∃ResWeakPropTruc → ∃WeakPropTruc
-∃ResWeakPropTruc→∃WeakPropTruc h .∥_∥  = h .∥_∥
-∃ResWeakPropTruc→∃WeakPropTruc h .ispt = h .ispt
+∃ResWeakPT→∃WeakPT : ∃ResWeakPT → ∃WeakPT
+∃ResWeakPT→∃WeakPT h .∥_∥  = h .∥_∥
+∃ResWeakPT→∃WeakPT h .ispt = h .ispt
 
-∃ResWeakPropTruc→Resizing : ∃ResWeakPropTruc → Resizing
-∃ResWeakPropTruc→Resizing h .resize ℓ ℓ' P = toProp (h .ispt)
-∃ResWeakPropTruc→Resizing h .prop-equiv  P = PropTrucEquiv (P .snd) (h .ispt)
+∃ResWeakPT→Resizing : ∃ResWeakPT → Resizing
+∃ResWeakPT→Resizing h .resize ℓ ℓ' P = toProp (h .ispt)
+∃ResWeakPT→Resizing h .prop-equiv  P = PropTrucEquiv (P .snd) (h .ispt)
 
-Resizing+∃WeakPropTruc→∃ResWeakPropTruc : Resizing → ∃WeakPropTruc → ∃ResWeakPropTruc
-Resizing+∃WeakPropTruc→∃ResWeakPropTruc r h .∥_∥ _ = r .resize _ _ (toProp (h .ispt)) .fst
-Resizing+∃WeakPropTruc→∃ResWeakPropTruc r h .ispt  = isWeakPropTruncPresEquiv (r .prop-equiv _) (h .ispt)
+Resizing+∃WeakPT→∃ResWeakPT : Resizing → ∃WeakPT → ∃ResWeakPT
+Resizing+∃WeakPT→∃ResWeakPT r h .∥_∥ _ = r .resize _ _ (toProp (h .ispt)) .fst
+Resizing+∃WeakPT→∃ResWeakPT r h .ispt  = isWeakPropTruncPresEquiv (r .prop-equiv _) (h .ispt)
