@@ -15,7 +15,7 @@ $$
 \Gamma \ \vdash X : \mathsf{Type} \ \ \ell
 }
 {
-\Gamma \ \vdash  \| X \| : \mathsf{Type} \ \ \ell'
+\Gamma \ \vdash  || X || : \mathsf{Type} \ \ \ell'
 }
 $$
 
