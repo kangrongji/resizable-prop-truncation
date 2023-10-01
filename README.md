@@ -41,4 +41,4 @@ we used in the proof some lemmas from the $\textsf{Cubical Agda}$ library.
 However, it should be emphasized that this result relies solely on vanilla HoTT, and even the univalence axiom is not required.
 
 This result shows the consistency of resizable *weak* propositional truncation. What about the *strict* one?
-It seems reasonable now to expect that it is also consistent (or not? the strict one appears somewhat unconventional form other perspectives... like in set theory). Perhaps constructing a model that justifies the strict version is not too hard. Another interesting question is whether or not it could lead to a constructive version of propositional resizing.
+It seems reasonable now to expect that it is also consistent (or not? the strict one appears somewhat strange form other perspectives... for example from set theory). Perhaps constructing a model that justifies the strict version is not too hard. Another interesting question is whether or not it could lead to a constructive version of propositional resizing.
