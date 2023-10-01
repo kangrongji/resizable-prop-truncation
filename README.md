@@ -1,2 +1,2 @@
-# resizable-prop-truncation
+# Resizable Propositional Truncation
 Some Thoughts on Resizable Propositional Truncation
