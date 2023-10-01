@@ -1,4 +1,4 @@
-# Resizing by Propositional Truncation
+# Resizing by PropTruncation
 
 The **resizable** propositional truncation
 is a variant of usual propositional truncation
@@ -19,7 +19,7 @@ $$
 }
 $$
 
-The usual propositional truncation simply the case when $\ell=\ell'$.
+The usual one is simply the case when $\ell=\ell'$.
 All other rules remain the same.
 There are two versions of it,
 as we can use either judgemental or propositional equality in the
@@ -27,7 +27,7 @@ formulation of the $\beta$-rule.
 In the former case, we call it **strict**,
 and in the latter case, we refer to it as **weak**.
 
-The main use of it is to reformulate Voevodsky's axiom of proposition resizing.
+The main purpose of it is to reformulate Voevodsky's axiom of proposition resizing.
 In `Resizing.agda`, we show that
 
 > Weak PropTruncation $+$ Resizing $=$ Resizable Weak PropTruncation
