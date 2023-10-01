@@ -31,9 +31,9 @@ Weak Propositional Truncation
 
 record isWeakPropTrunc (X : Type ℓ) (∥X∥ : Type ℓ') : SSetω where
   field
-    ∣_∣ : X → ∥X∥
+    ∣_∣    : X → ∥X∥
     squash : (x y : ∥X∥) → x ≡ y
-    elim :
+    elim   :
       {P : ∥X∥ → Type ℓ''}
       (p : (x : X) → P ∣ x ∣)
       (h : isPropDep P)
@@ -76,12 +76,12 @@ Existence of (Resizable) Weak Propositional Truncation
 
 record ∃WeakPropTruc : SSetω where
   field
-    ∥_∥ : Type ℓ → Type ℓ
+    ∥_∥  : Type ℓ → Type ℓ
     ispt : {X : Type ℓ} → isWeakPropTrunc X ∥ X ∥
 
 record ∃ResWeakPropTruc : SSetω where
   field
-    ∥_∥ : Type ℓ → Type ℓ'
+    ∥_∥  : {ℓ ℓ' : Level} → Type ℓ → Type ℓ'
     ispt : {X : Type ℓ} → isWeakPropTrunc {ℓ' = ℓ'} X ∥ X ∥
 
 
