@@ -27,7 +27,7 @@ formulation of the $\beta$-rule.
 In the former case, we call it **strict**,
 and in the latter case, we refer to it as **weak**.
 
-The main purpose of it is to reformulate Voevodsky's axiom of proposition resizing.
+The main purpose is to reformulate Voevodsky's axiom of proposition resizing.
 In `Resizing.agda`, we show that
 
 > Weak PropTruncation $+$ Resizing $=$ Resizable Weak PropTruncation
