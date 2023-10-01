@@ -15,7 +15,7 @@ $$
 \Gamma \ \vdash X : \mathsf{Type} \ \ \ell
 }
 {
-\Gamma \ \vdash  || X || : \mathsf{Type} \ \ \ell'
+\Gamma \ \vdash || X || : \mathsf{Type} \ \ \ell'
 }
 $$
 
@@ -41,3 +41,4 @@ we use some lemmas from the `Cubical Agda` library.
 It should be noted that this result relies solely on vanilla HoTT, and even the univalence axiom is not required.
 
 What would happen if we use the *strict* one?
+Would it be able to provide a constructive version of propositional resizing?
