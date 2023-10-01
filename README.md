@@ -34,11 +34,11 @@ In `Resizing.agda`, we show that
 
 In other words, the existence of the usual weak propositional truncation, together with the validity of the proposition resizing axiom, is equivalent to the existence of weak resizable propositional truncation.
 
-The proof is not complicated and can be seen as a direct corollary of the fact that "type $A$ is a propositional truncation of type $B$" is preserved
-by equivalence.
+The proof is not complicated and can be seen as a direct corollary of the fact that "the type $A$ is a weak propositional truncation of the type $B$" is preserved
+by equivalences.
 For convenience,
-we use some lemmas from the `Cubical Agda` library.
-It should be noted that this result relies solely on vanilla HoTT, and even the univalence axiom is not required.
+we use some lemmas from the `Cubical Agda` library in the proof.
+However, it should be emphasized that this result relies solely on vanilla HoTT, and even the univalence axiom is not required.
 
 What would happen if we use the *strict* one?
 Would it be able to provide a constructive version of propositional resizing?
